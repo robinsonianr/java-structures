@@ -1,6 +1,5 @@
 package com.robinson.datastructures;
 
-;
 
 public class Queue<E> {
     public int length;

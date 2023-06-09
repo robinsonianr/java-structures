@@ -1,0 +1,27 @@
+package com.robinson;
+
+import com.robinson.datastructures.BinaryNode;
+
+public class PracticeProblem {
+    
+    // comapare 2 binary trees and see of they are equal
+    public static boolean compare(BinaryNode<Integer> a, BinaryNode<Integer> b) {
+        
+        // structural check
+        if (a == null && b == null) {
+            return true;
+        }
+        // structural check
+        if (a == null || b == null) {
+            return false;
+        }
+        // value check
+        if (!a.value.equals(b.value)) {
+            return false;
+        }
+        
+        
+        return compare(a.left, b.left) && compare(a.right, b.right);
+    }
+    
+}

@@ -21,4 +21,25 @@ public class CrystalBalls {
         return -1;
     }
 
+
+
+    private int binarySearch2(int[] haystack, int needle) {
+        int lo = 0;
+        int hi = haystack.length;
+
+        while (lo < hi) {
+            int mid = (lo + (hi + lo) / 2);
+            int midVal = haystack[mid];
+
+            if (midVal == needle) {
+                return mid;
+            } else if(midVal > needle){
+                hi = mid;
+            } else {
+                lo = mid + 1;
+            }
+        }
+        return -1;
+    }
+
 }
