@@ -26,7 +26,7 @@ public class MinHeap {
         int out = this.data.get(0);
         this.length--;
         
-        if (this.data.size() == 1) {
+        if (this.length == 0) {
             this.data = new ArrayList<>();
             return out;
         }
